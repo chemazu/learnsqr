@@ -1,0 +1,28 @@
+// .dashboarditem {
+//   display: flex;
+//   width: 40%;
+//   align-items: center;
+//   padding: 10px;
+//   justify-content: space-between;
+//   img {
+//     width: 25%;
+//   }
+// }
+
+.dashboarditem {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  color: #213f7d;
+  // background-color: #39cdcc;
+  align-items: center;
+  width: fit-content;
+  grid-column-gap: 5px;
+  padding: 10px 0px;
+  p {
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+  }
+}

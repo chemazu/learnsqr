@@ -1,8 +1,6 @@
-import React from 'react'
-import "./style.scss"
+import React from "react";
+import "./style.scss";
 
 export default function UserDetail() {
-  return (
-    <div>UserDetail</div>
-  )
+  return <div>UserDetail</div>;
 }

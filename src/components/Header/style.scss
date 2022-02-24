@@ -1,68 +1,72 @@
 .header {
-  .nav{
-  padding: 10px 5%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: aquamarine;
-  box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
-  .search {
-    overflow: hidden;
-    border-radius: 5px;
-    display: grid;
-    grid-template-columns: 344fr 56fr;
-    border: 1px solid #213f7d;
-    height: 25%;
-    width: 30%;
-
-    input {
-      padding: 5px;
-      border: 0px;
-      &:focus {
-        outline: none !important;
-      }
-    }
-    div {
-      background-color: #39cdcc;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  }
-  .right {
+  height: 50px;
+  .nav {
+    padding: 10px 5%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 0 30px;
-    width: 20%;
-    p {
+    justify-content: space-between;
+    box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.05);
+    .search {
+      overflow: hidden;
+      border-radius: 5px;
+      display: grid;
+      grid-template-columns: 344fr 56fr;
+      border: 1px solid #213f7d;
       height: 25%;
+      width: 30%;
+
+      input {
+        padding: 5px;
+        border: 0px;
+        &:focus {
+          outline: none !important;
+        }
+      }
+      div {
+        background-color: #39cdcc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     }
-    .user-image {
-      width: 10%;
-      border-radius: 50%;
-    }
-    .account {
+    .right {
       display: flex;
       align-items: center;
       justify-content: space-around;
+      padding: 0 30px;
+      width: 20%;
+      p {
+        height: 25%;
+      }
+      .bell,
+      .caretdown {
+        width: 7.5%;
+        padding-top: 5px;
+      }
+      .user-image {
+        width: 10%;
+        border-radius: 50%;
+      }
+      .account {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
     }
   }
-}}
-.mob-nav{
+}
+.mob-nav {
   display: none;
 }
 
-@media screen and (max-width:480px){
-  .header{
-    .nav{
-  display: none;
-
+@media screen and (max-width: 480px) {
+  .header {
+    .nav {
+      display: none;
     }
   }
-  .mob-nav{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-
-}
+  .mob-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }

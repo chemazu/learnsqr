@@ -4,10 +4,13 @@ import Dashboard from "./view/Dashboard";
 import Login from "./view/Login";
 import UserDetail from "./view/UserDetail";
 import User from "./view/User";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div className="App">
+      <Header />
+
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />

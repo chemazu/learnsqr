@@ -1,8 +1,11 @@
-import React from 'react'
-import "./style.scss"
+import React from "react";
+import Card from "../../components/Card";
+import "./style.scss";
 
 export default function User() {
   return (
-    <div>User</div>
-  )
+    <div>
+      <Card />
+    </div>
+  );
 }
