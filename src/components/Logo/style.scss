@@ -1,0 +1,9 @@
+.logo {
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+  justify-content: space-between;
+  height: 25%;
+  img {
+    width: 80%;
+  }
+}
