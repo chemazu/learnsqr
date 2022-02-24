@@ -4,6 +4,7 @@ import search from "../../resource/search.svg";
 import bell from "../../resource/bell.svg";
 import user from "../../resource/user.jpg";
 import caretdown from "../../resource/caretdown.svg";
+import menu from "../../resource/menu-icon.svg"
 
 import "./style.scss";
 import { Link } from "react-router-dom";
