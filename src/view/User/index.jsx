@@ -30,7 +30,7 @@ import loanCard from "../../resource/card-load.svg";
 import savingCard from "../../resource/card-saving.svg";
 import UserFilterItem from "../../components/UserFilterItem";
 
-export default function Dashboard() {
+export default function User() {
   const customer = [
     { title: "Users", img: briefcase },
     { title: "Guarantors", img: guarantor },

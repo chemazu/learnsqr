@@ -29,7 +29,7 @@ import activeStatus from "../../resource/card-active.svg";
 import loanCard from "../../resource/card-load.svg";
 import savingCard from "../../resource/card-saving.svg";
 
-export default function User() {
+export default function Dashboard() {
   const customer = [
     { title: "Users", img: briefcase },
     { title: "Guarantors", img: guarantor },
