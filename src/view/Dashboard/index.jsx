@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.scss";
+import users from "../../resource/user.json";
 import DashboardItem from "../../components/DashboardItem";
 import briefcase from "../../resource/briefcase.svg";
 import decision from "../../resource/decision.svg";
@@ -20,6 +21,8 @@ import report from "../../resource/report.svg";
 import clipboard from "../../resource/clipboard.svg";
 import badge from "../../resource/badge.svg";
 import slider from "../../resource/slider.svg";
+import FilterItem from "../../components/FilterItem/Index";
+import FilterRow from "../../components/FilterRow";
 
 export default function Dashboard() {
   const customer = [
@@ -48,6 +51,15 @@ export default function Dashboard() {
     { title: "Fees and Prices", img: badge },
     { title: "Audit Logs", img: clipboard },
   ];
+  const filterDetail = [
+    "ORGANIZATION",
+    "USERNAME",
+    "EMAIL",
+    "PHONE NUMBER",
+    "DATE JOINED",
+    "STATUS",
+  ];
+
   return (
     <div className="dashboard">
       <div className="dashboard-control">
@@ -75,7 +87,23 @@ export default function Dashboard() {
           ))}
         </div>
       </div>
-      <div className="dashboard-info"></div>
+      <div className="dashboard-info">
+        <h2>Users</h2>
+        <div className="cardholer"></div>
+        <div className="table">
+          <div className="new">
+            {filterDetail.map((item) => (
+              <FilterItem title={item} />
+            ))}
+          </div>
+          <div className="second">
+            {users.map((item) => (
+              <FilterRow item={item} />
+            ))}
+          </div>
+        </div>
+        <div className="range"></div>
+      </div>
     </div>
   );
 }
