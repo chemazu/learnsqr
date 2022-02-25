@@ -29,7 +29,7 @@ import activeStatus from "../../resource/card-active.svg";
 import loanCard from "../../resource/card-load.svg";
 import savingCard from "../../resource/card-saving.svg";
 
-export default function Dashboard() {
+export default function User() {
   const customer = [
     { title: "Users", img: briefcase },
     { title: "Guarantors", img: guarantor },
@@ -121,6 +121,7 @@ export default function Dashboard() {
             return <Card item={item} />;
           })}
         </div>
+
         <div className="table">
           <div className="new">
             {filterDetail.map((item) => (
