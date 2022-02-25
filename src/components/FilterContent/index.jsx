@@ -5,7 +5,7 @@ export default function FilterContent(props) {
   const { title } = props;
   return (
     <div className="filter-content">
-      <p>{title}</p>
+      <p className={title}>{title}</p>
     </div>
   );
 }

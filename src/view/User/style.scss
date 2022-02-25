@@ -43,8 +43,55 @@
       grid-column-gap: 20px;
       padding: 2.5%;
     }
-    .showfilter {
+    .filter-holder {
       padding: 2.5%;
+    }
+    .showfilter {
+      position: absolute;
+      z-index: 10;
+      padding: 5% 2.5%;
+      width: 270px;
+      height: fit-content;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-column-gap: 10%;
+      background: #ffffff;
+      border: 1px solid rgba(84, 95, 125, 0.14);
+      box-sizing: border-box;
+      box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+      border-radius: 4px;
+
+      form {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 10%;
+        height: 90%;
+      }
+      .button-wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+        padding: 10px 0px;
+        .white-button {
+          border: 1px solid #545f7d;
+          box-sizing: border-box;
+          border-radius: 8px;
+          background: #fff;
+          color: #545f7d;
+        }
+        .blue-button {
+          background: #39cdcc;
+          border: 1px solid #39cdcc;
+          box-sizing: border-box;
+          border-radius: 8px;
+          color: #fff;
+        }
+        button {
+          width: 100%;
+          padding: 10px;
+        }
+      }
     }
     .table {
       padding: 2.5%;

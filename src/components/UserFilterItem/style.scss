@@ -1,0 +1,35 @@
+.user-filter-item {
+  display: grid;
+  padding: 10px 5px;
+  label {
+    padding: 5px 0px;
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #545f7d;
+  }
+
+  div {
+    border: 1px solid #213f7d;
+    border-radius: 8px;
+    background: #ffffff;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 5px;
+
+    select {
+      width: 100%;
+
+      border: 0px;
+      padding: 2.5px;
+      color: #213f7d;
+      background: #ffffff;
+      &:focus {
+        outline: none !important;
+      }
+    }
+  }
+}

@@ -84,14 +84,19 @@ export default function Dashboard() {
       return true;
     });
   };
-  let unique = [];
 
   const [filterObject, setFilterObject] = useState({});
   const [changeObject, setChangeObject] = useState({});
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setChangeObject({ ...changeObject, [name]: value });
+    if (value == "") {
+      setChangeObject(delete changeObject[name]);
+    } else {
+      setChangeObject({ ...changeObject, [name]: value });
+    }
   };
+
   const allUsers = userFilter().length;
   const activeUsers = userFilter({ status: "active" }).length;
   const loanUsers = userFilter({ accountType: "loan" }).length;
@@ -110,13 +115,14 @@ export default function Dashboard() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setFilterObject(changeObject);
-    console.log(filterObject);
-    console.log(userFilter(filterObject));
+  };
+  const clearFilters = (e) => {
+    e.target.value = "";
   };
   const handleReset = (e) => {
     e.preventDefault();
+
     setFilterObject({});
-    console.log(filterObject);
   };
 
   return (
@@ -127,7 +133,6 @@ export default function Dashboard() {
         />
         <div className="customer">
           <DashboardItem item={{ title: "Dashboard", img: dashboard }} />
-
           <p>CUSTOMERS</p>
           {customer.map((item) => (
             <DashboardItem item={item} />
@@ -153,22 +158,25 @@ export default function Dashboard() {
             return <Card item={item} />;
           })}
         </div>
-        <div className="showfilter">
-          <button>Show Filter</button>
-          <div className="user-filter">
+        <div className="filter-holder">
+          <div className="showfilter">
             <form onSubmit={handleSubmit}>
               {filterItemDetail.map((item) => (
                 <UserFilterItem
                   handleChange={handleChange}
                   users={users}
-                  unique={unique}
                   onlyUnique={onlyUnique}
                   item={item}
                 />
               ))}
-
-              <button type="submit">Filter</button>
-              <button onClick={handleReset}>Reset</button>
+              <div className="button-wrapper">
+                <button type="submit" className="white-button">
+                  Filter
+                </button>
+                <button onClick={handleReset} className="blue-button">
+                  Reset
+                </button>
+              </div>
             </form>
           </div>
         </div>
