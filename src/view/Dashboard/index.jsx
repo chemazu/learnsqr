@@ -23,6 +23,11 @@ import badge from "../../resource/badge.svg";
 import slider from "../../resource/slider.svg";
 import FilterItem from "../../components/FilterItem/Index";
 import FilterRow from "../../components/FilterRow";
+import Card from "../../components/Card";
+import userStatus from "../../resource/active-status.svg";
+import activeStatus from "../../resource/card-active.svg";
+import loanCard from "../../resource/card-load.svg";
+import savingCard from "../../resource/card-saving.svg";
 
 export default function Dashboard() {
   const customer = [
@@ -60,6 +65,28 @@ export default function Dashboard() {
     "STATUS",
   ];
 
+  const userFilter = (a) => {
+    return users.filter((item) => {
+      for (let i in a) {
+        if (item[i] === undefined || item[i] != a[i]) {
+          return false;
+        }
+      }
+      return true;
+    });
+  };
+  const allUsers = userFilter().length;
+  const activeUsers = userFilter({ status: "active" }).length;
+  const loanUsers = userFilter({ accountType: "loan" }).length;
+  const savingUsers = userFilter({ accountType: "savings" }).length;
+
+  const cardHolderData = [
+    { title: "Users", img: userStatus, number: allUsers },
+    { title: "Active Users", img: activeStatus, number: activeUsers },
+    { title: "Users with Loans", img: loanCard, number: loanUsers },
+    { title: "Users with Savings", img: savingCard, number: savingUsers },
+  ];
+
   return (
     <div className="dashboard">
       <div className="dashboard-control">
@@ -89,7 +116,11 @@ export default function Dashboard() {
       </div>
       <div className="dashboard-info">
         <h2>Users</h2>
-        <div className="cardholer"></div>
+        <div className="card-holder">
+          {cardHolderData.map((item) => {
+            return <Card item={item} />;
+          })}
+        </div>
         <div className="table">
           <div className="new">
             {filterDetail.map((item) => (

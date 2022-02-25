@@ -4,6 +4,126 @@
     "username": "Debby",
     "email": "Debby@me.com",
     "phone": "08121412036",
+    "status": "inactive",
+    "date": "May 15, 2020 10:00 AM",
+    "organization": "Lendsqr",
+    "accountType": "loan"
+  },
+  {
+    "id": 2,
+    "username": "Paul",
+    "email": "Paul@me.com",
+    "phone": "08121412036",
+    "status": "pending",
+    "date": "May 15, 2020 10:00 AM",
+    "organization": "Lendsqr",
+    "accountType": "loan"
+  },
+  {
+    "id": 3,
+    "username": "Deji",
+    "email": "Deji@me.com",
+    "phone": "08121412036",
+    "status": "blacklisted",
+    "date": "May 15, 2020 10:00 AM",
+    "organization": "Lendsqr",
+    "accountType": "loan"
+  },
+  {
+    "id": 4,
+    "username": "Shola",
+    "email": "Shola@me.com",
+    "phone": "08121412036",
+    "status": "active",
+    "date": "May 15, 2020 10:00 AM",
+    "organization": "Lendsqr",
+    "accountType": "loan"
+  },
+  {
+    "id": 5,
+    "username": "Rayo",
+    "email": "Rayo@me.com",
+    "phone": "08121412036",
+    "status": "pending",
+    "date": "May 15, 2020 10:00 AM",
+    "organization": "Irorun",
+    "accountType": "savings"
+  },
+  {
+    "id": 6,
+    "username": "Debby",
+    "email": "me@me.com",
+    "phone": "08121412036",
+    "status": "pending",
+    "date": "May 15, 2020 10:00 AM",
+    "organization": "Irorun",
+    "accountType": "savings"
+  },
+  {
+    "id": 7,
+    "username": "Debby",
+    "email": "Debby@me.com",
+    "phone": "08121412036",
+    "status": "active",
+    "date": "May 15, 2020 10:00 AM",
+    "organization": "Lendsqr",
+    "accountType": "loan"
+  },
+  {
+    "id": 8,
+    "username": "Paul",
+    "email": "Paul@me.com",
+    "phone": "08121412036",
+    "status": "active",
+    "date": "May 15, 2020 10:00 AM",
+    "organization": "Lendsqr",
+    "accountType": "loan"
+  },
+  {
+    "id": 9,
+    "username": "Deji",
+    "email": "Deji@me.com",
+    "phone": "08121412036",
+    "status": "active",
+    "date": "May 15, 2020 10:00 AM",
+    "organization": "Lendsqr",
+    "accountType": "loan"
+  },
+  {
+    "id": 10,
+    "username": "Shola",
+    "email": "Shola@me.com",
+    "phone": "08121412036",
+    "status": "active",
+    "date": "May 15, 2020 10:00 AM",
+    "organization": "Lendsqr",
+    "accountType": "loan"
+  },
+  {
+    "id": 11,
+    "username": "Rayo",
+    "email": "Rayo@me.com",
+    "phone": "08121412036",
+    "status": "pending",
+    "date": "May 15, 2020 10:00 AM",
+    "organization": "Irorun",
+    "accountType": "savings"
+  },
+  {
+    "id": 12,
+    "username": "Debby",
+    "email": "me@me.com",
+    "phone": "08121412036",
+    "status": "pending",
+    "date": "May 15, 2020 10:00 AM",
+    "organization": "Irorun",
+    "accountType": "savings"
+  },
+  {
+    "id": 1,
+    "username": "Debby",
+    "email": "Debby@me.com",
+    "phone": "08121412036",
     "status": "active",
     "date": "May 15, 2020 10:00 AM",
     "organization": "Lendsqr",

@@ -1,6 +1,13 @@
 .card {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-row-gap: 10%;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  height: 130px;
+  background: #ffffff;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-sizing: border-box;
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
   border-radius: 4px;
-  width: fit-content;
-  width: 25%;
 }

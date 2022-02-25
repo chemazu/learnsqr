@@ -14,16 +14,16 @@ export default function Login() {
   } = useInput("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email, password);
+
     resetEmail();
     resetPassword();
   };
   const showPassword = (e) => {
-    if (type == "password") {
+    if (type === "password") {
       e.preventDefault();
       setType("text");
     }
-    if (type == "text") {
+    if (type === "text") {
       e.preventDefault();
 
       setType("password");
