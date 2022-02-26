@@ -47,4 +47,13 @@ padding: 25px;
 padding: 5px;
 
   }
+  .pagination-bar {
+    width: fit-content;
+    justify-content: flex-end;
+  }
+  .pagination-holder {
+    .showing{
+      width: 50%;
+    }
+  }
 }
