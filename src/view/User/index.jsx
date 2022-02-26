@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./style.scss";
-import FilterItem from "../../components/FilterItem/Index";
 import Card from "../../components/Card";
 import userStatus from "../../resource/active-status.svg";
 import activeStatus from "../../resource/card-active.svg";
