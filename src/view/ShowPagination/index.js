@@ -2,8 +2,17 @@ import React, { useState, useMemo } from "react";
 import Pagination from "../../components/Pagination/Pagination";
 import "./style.scss";
 import FilterRow from "../../components/FilterRow";
+import FilterItem from "../../components/FilterItem/Index";
 
 export default function Example(props) {
+  const filterDetail = [
+    "ORGANIZATION",
+    "USERNAME",
+    "EMAIL",
+    "PHONE NUMBER",
+    "DATE JOINED",
+    "STATUS",
+  ];
   const { data } = props;
   const [PageSize, setPageSize] = useState(25);
   const handleChange = (e) => {
@@ -17,9 +26,16 @@ export default function Example(props) {
   }, [currentPage, data,PageSize]);
   return (
     <>
-      {currentTableData.map((item) => (
+    <div className="row-wrapper">
+    <div className="new">
+            {filterDetail.map((item) => (
+              <FilterItem title={item} />
+            ))}
+          </div>
+    {currentTableData.map((item) => (
         <FilterRow item={item} />
-      ))}
+      ))}</div>  
+      
       <div className="pagination-holder">
         <div className="showing">
           <p>Showing</p>

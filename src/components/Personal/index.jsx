@@ -1,17 +1,9 @@
 import React from "react";
 import "./style.scss";
 
-export default function Personal() {
+export default function Personal(props) {
   const item = {
     id: 1,
-    // username: "Debby",
-    // fullname: "Grace Effiom",
-    // phone: "07060780922",
-    // email: "Debby@me.com",
-    // gender: "Female",
-    // marital: "Single",
-    // kid: "none",
-    // residence: "Parent’s Apartment",
     status: "inactive",
     date: "May 15, 2020 10:00 AM",
     organization: "Lendsqr",
@@ -23,12 +15,28 @@ export default function Personal() {
     office: "grace@lendsqr.com",
     income: "₦200,000.00- ₦400,000.00",
     repay: "40,000",
-    gname:"Debby Ogana",
-    gphone:"07060780922",
-    gemail:"debby@gmail.com",
-    grelate:"Sister"
+    gname: "Debby Ogana",
+    gphone: "07060780922",
+    gemail: "debby@gmail.com",
+    grelate: "Sister",
   };
-  const { fullname,username, phone, email, gender, residence, marital, kid,level,employ,sector,duration,office,income,repay} = item;
+  const {
+    fullname,
+    username,
+    phone,
+    email,
+    gender,
+    residence,
+    marital,
+    kid,
+    level,
+    employ,
+    sector,
+    duration,
+    office,
+    income,
+    repay,
+  } = props.currentUser[0];
   return (
     <div className="personal">
       <div className="info-wrapper">
@@ -116,7 +124,6 @@ export default function Personal() {
             <p>Instagram</p>
             <h4>{username}</h4>
           </div>
-          
         </div>
       </div>
     </div>

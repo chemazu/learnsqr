@@ -8,7 +8,7 @@ export default function FilterRow(props) {
   return (
     <div className="filter-row">
       <FilterContent title={item.organization} />
-      <FilterContent title={item.username} />
+      <FilterContent id={item._id} title={item.username} />
       <FilterContent title={item.email} />
       <FilterContent title={item.phone} />
       <FilterContent title={item.date} />

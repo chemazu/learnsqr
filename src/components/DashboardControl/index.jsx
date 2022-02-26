@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.scss";
-import DashboardItem from "../../components/DashboardItem";
+import DashboardItem from "../DashboardItem";
 import briefcase from "../../resource/briefcase.svg";
 import decision from "../../resource/decision.svg";
 import loan from "../../resource/loan.svg";
@@ -20,17 +20,9 @@ import report from "../../resource/report.svg";
 import clipboard from "../../resource/clipboard.svg";
 import badge from "../../resource/badge.svg";
 import slider from "../../resource/slider.svg";
-import FilterItem from "../../components/FilterItem/Index";
-import Card from "../../components/Card";
-import userStatus from "../../resource/active-status.svg";
-import activeStatus from "../../resource/card-active.svg";
-import loanCard from "../../resource/card-load.svg";
-import savingCard from "../../resource/card-saving.svg";
-import Example from "../ShowPagination";
+import logout from "../../resource/logout.svg";
 
-
-export default function Dashboard() {
-  var users = JSON.parse(localStorage.getItem("users"));
+export default function DashboardControl() {
   const customer = [
     { title: "Users", img: briefcase },
     { title: "Guarantors", img: guarantor },
@@ -57,32 +49,7 @@ export default function Dashboard() {
     { title: "Fees and Prices", img: badge },
     { title: "Audit Logs", img: clipboard },
   ];
-  
-
-  const userFilter = (a) => {
-    return users.filter((item) => {
-      for (let i in a) {
-        if (item[i] === undefined || item[i] != a[i]) {
-          return false;
-        }
-      }
-      return true;
-    });
-  };
-  const allUsers = userFilter().length;
-  const activeUsers = userFilter({ status: "active" }).length;
-  const loanUsers = userFilter({ accountType: "loan" }).length;
-  const savingUsers = userFilter({ accountType: "savings" }).length;
-
-  const cardHolderData = [
-    { title: "Users", img: userStatus, number: allUsers },
-    { title: "Active Users", img: activeStatus, number: activeUsers },
-    { title: "Users with Loans", img: loanCard, number: loanUsers },
-    { title: "Users with Savings", img: savingCard, number: savingUsers },
-  ];
-
   return (
-    <div className="dashboard">
       <div className="dashboard-control">
         <DashboardItem
           item={{ title: "Switch Organization", img: briefcase }}
@@ -106,22 +73,11 @@ export default function Dashboard() {
             <DashboardItem item={item} />
           ))}
         </div>
-      </div>
-      <div className="dashboard-info">
-        <h2>Users</h2>
-        <div className="card-holder">
-          {cardHolderData.map((item) => {
-            return <Card item={item} />;
-          })}
+        <div className="logout">
+          <DashboardItem item={{ title: "", img: logout }} />
+          <p>Logout</p>
         </div>
-
-        <div className="table">
-          <div className="second">
-            <Example   data={userFilter()}/>
-          </div>
-        </div>
-        <div className="range"></div>
       </div>
-    </div>
+ 
   );
 }
