@@ -7,7 +7,7 @@ import User from "./view/User";
 import Header from "./components/Header";
 
 function App() {
-  localStorage.setItem('rememberMe', "rememberMe");
+  localStorage.setItem("rememberMe", "rememberMe");
   return (
     <div className="App">
       <Header />

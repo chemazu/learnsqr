@@ -7,9 +7,12 @@ import caretdown from "../../resource/caretdown.svg";
 import menu from "../../resource/menu-icon.svg";
 
 import "./style.scss";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
-export default function Header() {
+export default function Header(props) {
+  console.log(props.location);
+  console.log(props.match);
+  console.log(props.history);
   return (
     <div className="header">
       <div className="nav">
