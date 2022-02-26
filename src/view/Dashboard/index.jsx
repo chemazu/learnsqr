@@ -1,6 +1,5 @@
 import React from "react";
 import "./style.scss";
-import users from "../../resource/user.json";
 import DashboardItem from "../../components/DashboardItem";
 import briefcase from "../../resource/briefcase.svg";
 import decision from "../../resource/decision.svg";
@@ -22,15 +21,16 @@ import clipboard from "../../resource/clipboard.svg";
 import badge from "../../resource/badge.svg";
 import slider from "../../resource/slider.svg";
 import FilterItem from "../../components/FilterItem/Index";
-import FilterRow from "../../components/FilterRow";
 import Card from "../../components/Card";
 import userStatus from "../../resource/active-status.svg";
 import activeStatus from "../../resource/card-active.svg";
 import loanCard from "../../resource/card-load.svg";
 import savingCard from "../../resource/card-saving.svg";
+import Example from "../ShowPagination";
+
 
 export default function Dashboard() {
-  console.log(localStorage.getItem("rememberMe"))
+  var users = JSON.parse(localStorage.getItem("users"));
   const customer = [
     { title: "Users", img: briefcase },
     { title: "Guarantors", img: guarantor },
@@ -96,7 +96,6 @@ export default function Dashboard() {
         />
         <div className="customer">
           <DashboardItem item={{ title: "Dashboard", img: dashboard }} />
-
           <p>CUSTOMERS</p>
           {customer.map((item) => (
             <DashboardItem item={item} />
@@ -130,9 +129,7 @@ export default function Dashboard() {
             ))}
           </div>
           <div className="second">
-            {users.map((item) => (
-              <FilterRow item={item} />
-            ))}
+            <Example const data={userFilter()}/>
           </div>
         </div>
         <div className="range"></div>

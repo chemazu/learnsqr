@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import FilterContent from "../FilterContent";
 import "./style.scss";
 
 export default function FilterRow(props) {
   const { item } = props;
+  console.log(item);
   return (
     <div className="filter-row">
       <FilterContent title={item.organization} />

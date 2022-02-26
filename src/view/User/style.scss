@@ -79,6 +79,11 @@
           border-radius: 8px;
           background: #fff;
           color: #545f7d;
+          &:hover{
+          color: #fff;
+          background: #39cdcc;
+          border: 1px solid #39cdcc;
+          }
         }
         .blue-button {
           background: #39cdcc;
@@ -86,6 +91,11 @@
           box-sizing: border-box;
           border-radius: 8px;
           color: #fff;
+          &:hover{
+            color: #fff;
+            background: red;
+            border: 1px solid #39cdcc;
+            }
         }
         button {
           width: 100%;

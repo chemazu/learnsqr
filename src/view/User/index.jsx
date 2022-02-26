@@ -22,13 +22,14 @@ import clipboard from "../../resource/clipboard.svg";
 import badge from "../../resource/badge.svg";
 import slider from "../../resource/slider.svg";
 import FilterItem from "../../components/FilterItem/Index";
-import FilterRow from "../../components/FilterRow";
 import Card from "../../components/Card";
 import userStatus from "../../resource/active-status.svg";
 import activeStatus from "../../resource/card-active.svg";
 import loanCard from "../../resource/card-load.svg";
 import savingCard from "../../resource/card-saving.svg";
 import UserFilterItem from "../../components/UserFilterItem";
+import Example from "../ShowPagination";
+import FilterRow from "../../components/FilterRow";
 
 export default function User() {
   const customer = [
@@ -87,15 +88,10 @@ export default function User() {
 
   const [filterObject, setFilterObject] = useState({});
   const [changeObject, setChangeObject] = useState({});
+  const [changeDummy, setChangeDummy] = useState(1);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    if (value == "") {
-      setChangeObject(delete changeObject[name]);
-    } else {
-      setChangeObject({ ...changeObject, [name]: value });
-    }
-  };
+
+  
 
   const allUsers = userFilter().length;
   const activeUsers = userFilter({ status: "active" }).length;
@@ -112,17 +108,27 @@ export default function User() {
   function onlyUnique(value, index, self) {
     return self.indexOf(value) === index;
   }
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    if (value == "") {
+      setChangeObject(delete changeObject[name]);
+    } else {
+      setChangeObject({ ...changeObject, [name]: value });
+    }
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     setFilterObject(changeObject);
   };
-  const clearFilters = (e) => {
-    e.target.value = "";
-  };
+
   const handleReset = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
+
 
     setFilterObject({});
+    setChangeDummy(3)
+    // window.location.reload(false);
   };
 
   return (
@@ -164,7 +170,7 @@ export default function User() {
               {filterItemDetail.map((item) => (
                 <UserFilterItem
                   handleChange={handleChange}
-                  users={users}
+                  users={userFilter(filterObject)}
                   onlyUnique={onlyUnique}
                   item={item}
                 />
@@ -187,9 +193,12 @@ export default function User() {
             ))}
           </div>
           <div className="second">
-            {userFilter(filterObject).map((item) => (
+          <Example data={userFilter(filterObject)}/>
+          {/* {userFilter(filterObject).map((item) => (
               <FilterRow item={item} />
-            ))}
+            ))} */}
+
+         
           </div>
         </div>
         <div className="range"></div>

@@ -5,9 +5,11 @@ import Login from "./view/Login";
 import UserDetail from "./view/UserDetail";
 import User from "./view/User";
 import Header from "./components/Header";
+import users from "./resource/user.json";
+
 
 function App() {
-  localStorage.setItem("rememberMe", "rememberMe");
+  localStorage.setItem("users", JSON.stringify(users));
   return (
     <div className="App">
       <Header />
