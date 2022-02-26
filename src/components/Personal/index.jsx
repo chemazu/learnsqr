@@ -36,6 +36,8 @@ export default function Personal(props) {
     office,
     income,
     repay,
+    gname,
+    grelate
   } = props.currentUser[0];
   return (
     <div className="personal">
@@ -124,6 +126,28 @@ export default function Personal(props) {
             <p>Instagram</p>
             <h4>{username}</h4>
           </div>
+        </div>
+      </div>
+      <div className="info-wrapper">
+        <h4>Guarantor</h4>
+        <div className="info">
+          <div>
+            <p>Full Name</p>
+            <h4>{gname}</h4>
+          </div>
+          <div>
+            <p>Facebook</p>
+            <h4>{phone}</h4>
+          </div>
+          <div>
+            <p>Email Address</p>
+            <h4>{office}</h4>
+          </div>
+          <div>
+            <p>Relationship</p>
+            <h4>{grelate}</h4>
+          </div>
+          
         </div>
       </div>
     </div>

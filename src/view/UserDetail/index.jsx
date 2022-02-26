@@ -14,7 +14,7 @@ export default function UserDetail() {
 
   return (
     <div className="dashboard">
-      <DashboardControl />
+      <DashboardControl logged={true} />
       <div className="userdetail-info">
         <Link to="/user">
           <div className="back">

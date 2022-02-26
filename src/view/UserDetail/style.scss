@@ -48,6 +48,15 @@
       justify-content: space-between;
       align-items: center;
       padding: 5% 0;
+      h2 {
+        font-family: Work Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
+
+        color: #213f7d;
+      }
       .button-wrapper {
         width: 30%;
         display: flex;
@@ -87,13 +96,13 @@
         align-items: center;
         div {
           padding: 10px 5px;
-          h3{
+          h3 {
             font-family: Work Sans;
-font-style: normal;
-font-weight: 700;
-// font-size: 22px;
+            font-style: normal;
+            font-weight: 700;
+            // font-size: 22px;
 
-color: #213F7D;
+            color: #213f7d;
           }
           p {
             font-family: Work Sans;
@@ -114,19 +123,19 @@ color: #213F7D;
         padding: 2.5%;
         padding-left: 5%;
         padding-bottom: 0;
-        p{
-        padding-bottom: 1%;
+        p {
+          padding-bottom: 1%;
 
           font-family: SF Compact Text;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 19px;
-/* identical to box height */
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 19px;
+          /* identical to box height */
 
-text-align: center;
+          text-align: center;
 
-color: rgba(0, 0, 0, 0.8);
+          color: rgba(0, 0, 0, 0.8);
         }
       }
     }

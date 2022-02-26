@@ -22,7 +22,8 @@ import badge from "../../resource/badge.svg";
 import slider from "../../resource/slider.svg";
 import logout from "../../resource/logout.svg";
 
-export default function DashboardControl() {
+export default function DashboardControl(props) {
+  const {logged} = props
   const customer = [
     { title: "Users", img: briefcase },
     { title: "Guarantors", img: guarantor },
@@ -73,10 +74,11 @@ export default function DashboardControl() {
             <DashboardItem item={item} />
           ))}
         </div>
-        <div className="logout">
+        {logged?<div className="logout">
           <DashboardItem item={{ title: "", img: logout }} />
           <p>Logout</p>
-        </div>
+        </div>:null}
+        
       </div>
  
   );
