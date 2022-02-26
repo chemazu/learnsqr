@@ -30,6 +30,7 @@ import loanCard from "../../resource/card-load.svg";
 import savingCard from "../../resource/card-saving.svg";
 
 export default function Dashboard() {
+  console.log(localStorage.getItem("rememberMe"))
   const customer = [
     { title: "Users", img: briefcase },
     { title: "Guarantors", img: guarantor },

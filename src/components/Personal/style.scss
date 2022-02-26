@@ -1,0 +1,50 @@
+.personal {
+  padding: 2.5% 5%;
+  background: #ffffff;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-sizing: border-box;
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  .info-wrapper {
+    padding: 2.5% 0px;
+    border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+   
+    h4 {
+      color: rgba(33, 63, 125, 1);
+      font-family: Work Sans;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 19px;
+      padding-bottom: 2em;
+    }
+    .info {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      div {
+        p {
+          font-family: Work Sans;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 14px;
+          text-transform: uppercase;
+          color: #545f7d;
+        }
+        h4 {
+          font-family: Work Sans;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 19px;
+          /* identical to box height */
+
+          color: #545f7d;
+        }
+      }
+    }
+    .education{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+}
