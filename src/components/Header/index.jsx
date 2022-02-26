@@ -10,9 +10,7 @@ import "./style.scss";
 import { Link, useParams } from "react-router-dom";
 
 export default function Header(props) {
-  console.log(props.location);
-  console.log(props.match);
-  console.log(props.history);
+ 
   return (
     <div className="header">
       <div className="nav">

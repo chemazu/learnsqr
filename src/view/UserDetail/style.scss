@@ -1,39 +1,6 @@
 .dashboard {
-  display: grid;
-  grid-template-columns: 2fr 8fr;
-  .dashboard-control {
-    padding-left: 25%;
-    padding-right: 5%;
-    padding-top: 15%;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
-    height: 100%;
-    p {
-      font-family: Work Sans;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 14px;
-      color: #545f7d;
-      padding: 7.5px 0;
-    }
-    .customer,
-    .dashboard,
-    .business,
-    .setting {
-      display: flex;
-      flex-direction: column;
 
-      p {
-        font-family: Work Sans;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 14px;
-        color: #545f7d;
-        padding: 7.5px 0;
-      }
-    }
-  }
+ 
   .userdetail-info {
     padding: 5%;
     .back {

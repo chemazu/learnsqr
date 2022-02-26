@@ -25,25 +25,25 @@ import logout from "../../resource/logout.svg";
 export default function DashboardControl(props) {
   const {logged} = props
   const customer = [
-    { title: "Users", img: briefcase },
-    { title: "Guarantors", img: guarantor },
-    { title: "Loans", img: loan },
-    { title: "Decision Models", img: decision },
-    { title: "Savings", img: savings },
-    { title: "Loan Requests", img: request },
-    { title: "Whitelist", img: white },
-    { title: "Karma", img: karma },
+    { title: "Users", img: briefcase ,key:1},
+    { title: "Guarantors", img: guarantor ,key:2},
+    { title: "Loans", img: loan ,key:3},
+    { title: "Decision Models", img: decision ,key:4},
+    { title: "Savings", img: savings,key:5 },
+    { title: "Loan Requests", img: request ,key:6},
+    { title: "Whitelist", img: white ,key:7},
+    { title: "Karma", img: karma,key:8 },
   ];
   const business = [
-    { title: "Organization", img: briefcase },
-    { title: "Loan Products", img: request },
-    { title: "Saving Products", img: savings1 },
-    { title: "Fee and Charges", img: coins },
-    { title: "Transactions", img: transactions },
-    { title: "Service Account", img: service },
-    { title: "Services", img: services },
-    { title: "Settlements ", img: scroll },
-    { title: "Reports", img: report },
+    { title: "Organization", img: briefcase ,key:1 },
+    { title: "Loan Products", img: request ,key:2},
+    { title: "Saving Products", img: savings1 ,key:3},
+    { title: "Fee and Charges", img: coins ,key:4},
+    { title: "Transactions", img: transactions ,key:5},
+    { title: "Service Account", img: service ,key:6},
+    { title: "Services", img: services,key:7 },
+    { title: "Settlements ", img: scroll ,key:8},
+    { title: "Reports", img: report ,key:9},
   ];
   const settings = [
     { title: "Preferences", img: slider },
@@ -59,19 +59,19 @@ export default function DashboardControl(props) {
           <DashboardItem item={{ title: "Dashboard", img: dashboard }} />
           <p>CUSTOMERS</p>
           {customer.map((item) => (
-            <DashboardItem item={item} />
+            <DashboardItem item={item} key ={item.key} />
           ))}
         </div>
         <div className="business">
           <p>BUSINESS</p>
           {business.map((item) => (
-            <DashboardItem item={item} />
+            <DashboardItem item={item} key ={item.key} />
           ))}
         </div>
         <div className="setting">
           <p>SETTINGS</p>
           {settings.map((item) => (
-            <DashboardItem item={item} />
+            <DashboardItem item={item} key ={item.key} />
           ))}
         </div>
         {logged?<div className="logout">

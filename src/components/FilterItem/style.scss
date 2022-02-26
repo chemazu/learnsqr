@@ -7,16 +7,39 @@
     font-family: Work Sans;
     font-style: normal;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 0.8em;
     line-height: 14px;
     display: flex;
     align-items: flex-end;
     text-transform: uppercase;
     color: #545f7d;
   }
-  img{
-    &:hover{
+  img {
+    &:hover {
       cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .filter-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      font-family: Work Sans;
+      font-style: normal;
+      font-weight: 600;
+      font-size:1%;
+      display: flex;
+      align-items: flex-end;
+      text-transform: uppercase;
+      color: #545f7d;
+      padding-right: 3px;
+    }
+    img {
+      width: 5px;
+
     }
   }
 }

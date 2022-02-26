@@ -122,7 +122,6 @@ export default function User() {
             <Example data={userFilter(filterObject)} />
           </div>
         </div>
-        <div className="range"></div>
       </div>
     </div>
   );

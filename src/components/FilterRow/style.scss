@@ -8,3 +8,20 @@
   border-right: 0px;
   border-left: 0px;
 }
+@media screen and (max-width: 480px) {
+
+
+  .filter-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 2px;
+    width: 100%;
+    padding: 10px 0;
+    border: 1px solid rgba(33, 63, 125, 0.1);
+    border-right: 0px;
+    border-left: 0px;
+    p{
+      font-size: 1%;
+    }
+  }
+}
