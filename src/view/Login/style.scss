@@ -108,3 +108,34 @@
     }
   }
 }
+
+@media screen and (max-width: 480px) {
+  .auth-form-item{
+    padding-top: 15px;
+  }
+  .login {
+    grid-template-columns: 1fr;
+  height: fit-content;
+
+
+    .left {
+      padding: 0px;
+      padding-top: 20%;
+    }
+    .right {
+      padding: 10px 10%;
+      padding-right: 0px;
+      .right-content {
+        width: 100%;
+        form{
+          div{
+            margin: 20px 0;
+          }
+        }
+        .div {
+          display: grid;
+        }
+      }
+    }
+  }
+}

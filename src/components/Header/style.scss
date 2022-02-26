@@ -67,6 +67,17 @@
   }
   .mob-nav {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    padding: 15px 10%;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+     
+    .menu-burger{
+      width:15%;
+    justify-self: flex-end;
+    padding-right: 50%;
+    padding-top: 10%;
+
+    }
   }
 }

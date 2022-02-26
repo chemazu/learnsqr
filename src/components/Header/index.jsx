@@ -35,12 +35,8 @@ export default function Header(props) {
       </div>
       <div className="mob-nav">
         <Logo />
-        <div className="search">
-          <input placeholder={"Search for anything"} />
-          <div>
-            <img src={search} alt="search" />
-          </div>
-        </div>
+        <img className="menu-burger" src={menu} alt="search" />
+
       </div>
     </div>
   );
