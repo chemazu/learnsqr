@@ -14,4 +14,9 @@
     text-transform: uppercase;
     color: #545f7d;
   }
+  img{
+    &:hover{
+      cursor: pointer;
+    }
+  }
 }

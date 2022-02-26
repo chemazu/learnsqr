@@ -30,10 +30,12 @@ import arrow from "../../resource/arrow.svg";
 import avatar from "../../resource/avatar.svg";
 import logout from "../../resource/logout.svg"
 
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Personal from "../../components/Personal";
 
 export default function UserDetail() {
+  let { id } = useParams();
+  console.log(id)
   const customer = [
     { title: "Users", img: briefcase },
     { title: "Guarantors", img: guarantor },

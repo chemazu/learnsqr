@@ -4,7 +4,7 @@ import "./style.scss";
 
 export default function FilterRow(props) {
   const { item } = props;
-  console.log(item);
+  
   return (
     <div className="filter-row">
       <FilterContent title={item.organization} />
