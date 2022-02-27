@@ -13,7 +13,7 @@ export default function Example(props) {
     "DATE JOINED",
     "STATUS",
   ];
-  const { data } = props;
+  const { data, openFilter } = props;
   const [PageSize, setPageSize] = useState(25);
   const handleChange = (e) => {
     setPageSize(e.target.value);
@@ -23,19 +23,20 @@ export default function Example(props) {
     const firstPageIndex = (currentPage - 1) * PageSize;
     const lastPageIndex = firstPageIndex + PageSize;
     return data.slice(firstPageIndex, lastPageIndex);
-  }, [currentPage, data,PageSize]);
+  }, [currentPage, data, PageSize]);
   return (
     <>
-    <div className="row-wrapper">
-    <div className="new">
-            {filterDetail.map((item) => (
-              <FilterItem title={item} />
-            ))}
-          </div>
-    {currentTableData.map((item) => (
-        <FilterRow item={item} />
-      ))}</div>  
-      
+      <div className="row-wrapper">
+        <div className="new">
+          {filterDetail.map((item) => (
+            <FilterItem openFilter={openFilter} title={item} />
+          ))}
+        </div>
+        {currentTableData.map((item) => (
+          <FilterRow item={item} />
+        ))}
+      </div>
+
       <div className="pagination-holder">
         <div className="showing">
           <p>Showing</p>

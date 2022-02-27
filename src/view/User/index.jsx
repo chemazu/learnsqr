@@ -119,7 +119,7 @@ export default function User() {
         </div>
         <div className="table">
           <div className="second">
-            <Example data={userFilter(filterObject)} />
+            <Example data={userFilter(filterObject)} openFilter={openFilter} />
           </div>
         </div>
       </div>
