@@ -48,3 +48,13 @@
     }
   }
 }
+
+@media screen and (max-width:480px) {
+  .personal .info-wrapper {.info, .education{
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap:5px ;
+  }
+
+}
+  
+}
