@@ -4,7 +4,6 @@ import Dashboard from "./view/Dashboard";
 import Login from "./view/Login";
 import UserDetail from "./view/UserDetail";
 import User from "./view/User";
-import Header from "./components/Header";
 import users from "./resource/user.json";
 
 

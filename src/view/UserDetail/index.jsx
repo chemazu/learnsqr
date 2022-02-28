@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useState}from "react";
 import "./style.scss";
 import arrow from "../../resource/arrow.svg";
 import avatar from "../../resource/avatar.svg";
@@ -7,17 +7,31 @@ import Personal from "../../components/Personal";
 import DashboardControl from "../../components/DashboardControl";
 import Header from "../../components/Header";
 
+
 export default function UserDetail() {
   var users = JSON.parse(localStorage.getItem("users"));
+  const [control, setControl] = useState(true);
+  const showDash = () => {
+    setControl(false);
+    control.log("erg");
+  };
+  const hideDash = () => {
+    setControl(true);
+  };
   let { id } = useParams();
   const currentUser = users.filter((item) => item._id == id);
   const { fullname } = currentUser[0];
 
   return (
     <>
-      <Header />
+      <Header control={showDash} />
       <div className="dashboard">
-        <DashboardControl logged={true} />
+        <div className="desktop">
+          <DashboardControl logged={true} />
+        </div>
+        {control ? null : (
+          <DashboardControl hideDash={hideDash} logged={true} />
+        )}
         <div className="userdetail-info">
           <Link to="/user">
             <div className="back">

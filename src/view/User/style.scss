@@ -70,12 +70,6 @@ p{
     }
     .table {
       padding: 2.5%;
-      // .new {
-      //   display: grid;
-      //   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-      //   grid-column-gap: 20px;
-      //   width: 100%;
-      // }
       .top {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -83,6 +77,4 @@ p{
     }
   }
 }
-@media screen and (max-width: 480px) {
-  
-}
+
