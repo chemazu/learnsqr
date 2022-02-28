@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./style.scss";
 import Card from "../../components/Card";
 import Header from "../../components/Header";
-
 import userStatus from "../../resource/active-status.svg";
 import activeStatus from "../../resource/card-active.svg";
 import loanCard from "../../resource/card-load.svg";
