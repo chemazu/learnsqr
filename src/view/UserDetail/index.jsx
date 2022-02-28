@@ -49,7 +49,7 @@ export default function UserDetail() {
           <div className="user-block">
             <div className="top">
               <img src={avatar} alt="avatar" />
-              <div style={{ borderRight: " 1px solid rgba(84, 95, 125,0.7)" }}>
+              <div>
                 <h3>{fullname}</h3>
                 <p>LSQFf587g90</p>
               </div>
