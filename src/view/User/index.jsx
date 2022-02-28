@@ -12,14 +12,15 @@ import Header from "../../components/Header";
 
 export default function User() {
   var users = JSON.parse(localStorage.getItem("users"));
-  const filterDetail = [
-    "ORGANIZATION",
-    "USERNAME",
-    "EMAIL",
-    "PHONE NUMBER",
-    "DATE JOINED",
-    "STATUS",
-  ];
+  const [control, setControl] = useState(true);
+  const showDash = () => {
+    setControl(false);
+    control.log("erg");
+  };
+  const hideDash = () => {
+    setControl(true);
+  };
+
   const filterItemDetail = [
     { id: 1, Title: "Organization", slug: "organization" },
     { id: 2, Title: "Username", slug: "username" },
@@ -85,9 +86,12 @@ export default function User() {
 
   return (
     <>
-      <Header />
+      <Header control={showDash} />
       <div className="dashboard">
-        <DashboardControl />
+        <div className="desktop">
+          <DashboardControl />
+        </div>
+        {control ? null : <DashboardControl hideDash={hideDash} />}
         <div className="dashboard-info">
           <h2>Users</h2>
           <div className="card-holder">
