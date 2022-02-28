@@ -47,13 +47,15 @@ export default function Example(props) {
           </select>
           <p>out of {data.length}</p>
         </div>
-        <Pagination
-          className="pagination-bar"
-          currentPage={currentPage}
-          totalCount={data.length}
-          pageSize={PageSize}
-          onPageChange={(page) => setCurrentPage(page)}
-        />
+        <div className="pagination-display-holder">
+          <Pagination
+            className="pagination-bar"
+            currentPage={currentPage}
+            totalCount={data.length}
+            pageSize={PageSize}
+            onPageChange={(page) => setCurrentPage(page)}
+          />
+        </div>
       </div>
     </>
   );
