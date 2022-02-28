@@ -12,7 +12,6 @@ function App() {
   localStorage.setItem("users", JSON.stringify(users));
   return (
     <div className="App">
-      <Header />
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />

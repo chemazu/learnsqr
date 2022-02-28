@@ -1,46 +1,48 @@
-.dashboard {
-  
-  .dashboard-control {
-    padding-left: 25%;
-    padding-right: 5%;
-    padding-top: 15%;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
-    height: 100%;
+.dashboard-control {
+  padding-left: 25%;
+  padding-right: 5%;
+  padding-top: 15%;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+  height: 100%;
+
+  p {
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 14px;
+    color: #545f7d;
+    padding: 7.5px 0;
+  }
+  .customer,
+  .dashboard,
+  .business,
+  .setting {
+    display: flex;
+    flex-direction: column;
+
     p {
       font-family: Work Sans;
       font-style: normal;
       font-weight: 500;
-      font-size: 16px;
+      font-size: 12px;
       line-height: 14px;
       color: #545f7d;
       padding: 7.5px 0;
     }
-    .customer,
-    .dashboard,
-    .business,
-    .setting {
-      display: flex;
-      flex-direction: column;
+  }
+}
 
-      p {
-        font-family: Work Sans;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 14px;
-        color: #545f7d;
-        padding: 7.5px 0;
-      }
+@media screen and (max-width: 480px) {
+  .dashboard-control {
+    border: 2px solid rgba(0, 0, 0, 0.05);
+    padding: 5%;
+    position: absolute;
+    left: 0;
+    z-index: 20;
+    background-color: #fff;
+    .close-dash {
+      color: red;
     }
   }
- 
-}
-@media screen and (max-width: 480px) {
-  .dashboard {
-      .dashboard-control{
-        display: none;
-      }
- 
-  }
-   
 }

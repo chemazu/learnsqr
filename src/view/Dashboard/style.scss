@@ -1,19 +1,17 @@
 .dashboard {
- 
   display: grid;
   grid-template-columns: 2fr 8fr;
   .dashboard-info {
     padding: 2.5%;
-    h2{
+    h2 {
       padding: 2.5%;
       font-family: Work Sans;
-font-style: normal;
-font-weight: bold;
-font-size: 24px;
-line-height: 28px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 28px;
 
-color: #213F7D;
-
+      color: #213f7d;
     }
 
     .card-holder {
@@ -38,34 +36,48 @@ color: #213F7D;
   }
 }
 @media screen and (max-width: 480px) {
+  .dashboard > * {
+    overflow-x: hidden;
+  }
   .dashboard {
-    display: grid;
+    overflow-x: hidden;
+
+    display: block;
     grid-template-columns: 1fr;
-    .dashboard-control{
+    .desktop {
       display: none;
     }
-.dashboard-info{
-  h2{
-    padding: 5%;
-  }
- 
-  .card-holder {
-    display: grid;
-    grid-template-columns: 160px 160px ;
-    grid-gap: 10px;
-    padding: 15px;
-    p{
-      font-size: 80%;
+    .dashboard-info {
+      h2 {
+        padding: 5%;
+        padding-top: 10%;
+      }
+
+      .card-holder {
+        display: grid;
+        max-width: 80vw;
+        grid-template-columns: 160px 160px;
+        grid-gap: 10px;
+        padding: 15px;
+        p {
+          font-size: 80%;
+        }
+      }
+      .table {
+        .new {
+          // grid-template-columns: 10vw 10vw 10vw 10vw 10vw 10vw;
+          grid-column-gap: 0px;
+          max-width: 80vw;
+          .filter-item {
+            font-size: 40%;
+            padding-right: 0px;
+            p {
+              line-height: 1rem;
+              text-align: center;
+            }
+          }
+        }
+      }
     }
-  }
-  .table{
-    .new{
-      // grid-template-columns: 10vw 10vw 10vw 10vw 10vw 10vw;
-      grid-column-gap: 2px;
-  
-    }
-  }
-}
- 
   }
 }

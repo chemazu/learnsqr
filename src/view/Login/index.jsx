@@ -3,6 +3,7 @@ import Button from "../../components/Button";
 import { useInput } from "../../hooks/input-hook";
 import pablo from "../../resource/pablo.svg";
 import "./style.scss";
+import Header from "../../components/Header";
 
 export default function Login() {
   const { value: email, change: changeEmail, reset: resetEmail } = useInput("");
@@ -30,39 +31,42 @@ export default function Login() {
   };
 
   return (
-    <div className="login">
-      <div className="left">
-        <img src={pablo} alt="pablo" />
-      </div>
-      <div className="right">
-        <div className="right-content">
-          <div className="div">
-            <h1>Welcome !</h1>
-            <p>Enter details to login.</p>
+    <>
+      <Header login={true} />
+      <div className="login">
+        <div className="left">
+          <img src={pablo} alt="pablo" />
+        </div>
+        <div className="right">
+          <div className="right-content">
+            <div className="div">
+              <h1>Welcome !</h1>
+              <p>Enter details to login.</p>
+            </div>
+
+            <form onSubmit={handleSubmit}>
+              <div className="auth-form-item">
+                <input
+                  placeholder="Enter your e-mail"
+                  type="email"
+                  {...changeEmail}
+                />
+              </div>
+              <div className="auth-form-item-pass">
+                <input
+                  placeholder="Enter your password"
+                  type={type}
+                  {...changePassword}
+                />
+                <span onClick={showPassword}>SHOW</span>
+              </div>
+
+              {/* <p className="forgot">Forgot Password</p> */}
+              <Button title="LOG IN" type="submit" option={1} />
+            </form>
           </div>
-
-          <form onSubmit={handleSubmit}>
-            <div className="auth-form-item">
-              <input
-                placeholder="Enter your e-mail"
-                type="email"
-                {...changeEmail}
-              />
-            </div>
-            <div className="auth-form-item-pass">
-              <input
-                placeholder="Enter your password"
-                type={type}
-                {...changePassword}
-              />
-              <span onClick={showPassword}>SHOW</span>
-            </div>
-
-            {/* <p className="forgot">Forgot Password</p> */}
-            <Button title="LOG IN" type="submit" option={1} />
-          </form>
         </div>
       </div>
-    </div>
+    </>
   );
 }

@@ -1,5 +1,5 @@
 .header {
-  height: 50px;
+  // height: 100px;
   .nav {
     padding: 10px 5%;
     display: flex;
@@ -68,16 +68,19 @@
   .mob-nav {
     display: grid;
     width: 100%;
+    overflow-x: visible;
     padding: 15px 10%;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-     
-    .menu-burger{
-      width:15%;
-    justify-self: flex-end;
-    padding-right: 50%;
-    padding-top: 10%;
 
+    .menu-burger {
+      width: 15%;
+      justify-self: flex-end;
+      padding-right: 50%;
+      padding-top: 10%;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }

@@ -8,6 +8,7 @@ import savingCard from "../../resource/card-saving.svg";
 import UserFilterItem from "../../components/UserFilterItem";
 import Example from "../ShowPagination";
 import DashboardControl from "../../components/DashboardControl";
+import Header from "../../components/Header";
 
 export default function User() {
   var users = JSON.parse(localStorage.getItem("users"));
@@ -83,46 +84,52 @@ export default function User() {
   };
 
   return (
-    <div className="dashboard">
-      <DashboardControl />
-      <div className="dashboard-info">
-        <h2>Users</h2>
-        <div className="card-holder">
-          {cardHolderData.map((item) => {
-            return <Card item={item} />;
-          })}
-        </div>
-        <div className="filter-holder">
-          {showFilter ? (
-            <div className="showfilter">
-              <p onClick={closeFilter}>Close Filter</p>
-              <form onSubmit={handleSubmit}>
-                {filterItemDetail.map((item) => (
-                  <UserFilterItem
-                    handleChange={handleChange}
-                    users={userFilter(filterObject)}
-                    onlyUnique={onlyUnique}
-                    item={item}
-                  />
-                ))}
-                <div className="button-wrapper">
-                  <button type="submit" className="white-button">
-                    Filter
-                  </button>
-                  <button onClick={handleReset} className="blue-button">
-                    Reset
-                  </button>
-                </div>
-              </form>
+    <>
+      <Header />
+      <div className="dashboard">
+        <DashboardControl />
+        <div className="dashboard-info">
+          <h2>Users</h2>
+          <div className="card-holder">
+            {cardHolderData.map((item) => {
+              return <Card item={item} />;
+            })}
+          </div>
+          <div className="filter-holder">
+            {showFilter ? (
+              <div className="showfilter">
+                <p onClick={closeFilter}>Close Filter</p>
+                <form onSubmit={handleSubmit}>
+                  {filterItemDetail.map((item) => (
+                    <UserFilterItem
+                      handleChange={handleChange}
+                      users={userFilter(filterObject)}
+                      onlyUnique={onlyUnique}
+                      item={item}
+                    />
+                  ))}
+                  <div className="button-wrapper">
+                    <button type="submit" className="white-button">
+                      Filter
+                    </button>
+                    <button onClick={handleReset} className="blue-button">
+                      Reset
+                    </button>
+                  </div>
+                </form>
+              </div>
+            ) : null}
+          </div>
+          <div className="table">
+            <div className="second">
+              <Example
+                data={userFilter(filterObject)}
+                openFilter={openFilter}
+              />
             </div>
-          ) : null}
-        </div>
-        <div className="table">
-          <div className="second">
-            <Example data={userFilter(filterObject)} openFilter={openFilter} />
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
